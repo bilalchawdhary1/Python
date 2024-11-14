@@ -24,7 +24,7 @@ help(my_function)
 # factorial(4) = 4*3*2*1
 # factorial(0) = 1
 
-
+# Recursion in Python using Recursion find factorial
 # factorial(n) = n * factorial(n-1)
 def factorial(n):
   if (n == 0 or n == 1):
