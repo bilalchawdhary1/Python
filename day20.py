@@ -14,7 +14,11 @@ smaller = a if a < b else b
 larger = a if a > b else b
 # print("The smaller number is", smaller)
 # print("The larger number is", larger)
-
+# in js
+# let gender = isMale ? 'Male' : 'Female';
+# in python 
+gender = input("Enter Your Gender(M/F) Here: ")
+print("You're Mail") if (gender == "m") else print("You're Female") if (gender == "f") else print("Please Enter Valid Gender")
 # print("a smaller") if a < b else print("a larger")
 
 a = 330
@@ -25,23 +29,23 @@ b = 330
 l1 = ["eat", "sleep", "repeat"]
 
 # printing the tuples in object directly
-for ele in enumerate(l1):
-    print (ele)
+# for ele in enumerate(l1):
+    # print (ele)
 
 # changing index and printing separately
-for count, ele in enumerate(l1, 1):
-    print (count, ele)
+# for count, ele in enumerate(l1, 1):
+    # print (count, ele)
 
-numbers = [1,2,3,4,5,6,7]
+# numbers = [1,2,3,4,5,6,7]
 
 # printing the tuples in object directly
-for number in numbers:
-    print(number)
+# for number in numbers:
+    # print(number)
 
 # changing index and printing separately
 
-for i, number in enumerate(numbers, 1):
-    print(i, number)
+# for i, number in enumerate(numbers, 1):
+    # print(i, number)
 
 
 #     Enumerate() in Python
