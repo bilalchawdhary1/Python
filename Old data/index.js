@@ -146,3 +146,59 @@ console.log(bFruits); // Output: ['blueberry', 'banana']
 // 11. reduce() - Executes a reducer function on each element of the array, resulting in a single output value
 let totalLength = fruits.reduce((total, fruit) => total + fruit.length, 0);
 console.log(totalLength); // Output: 19
+// 12. find() - Returns the value of the first element that satisfies the provided testing function
+let foundFruit = fruits.find(fruit => fruit.startsWith("c"));
+console.log(foundFruit); // Output: 'cherry'
+// 13. findIndex() - Returns the index of the first element that satisfies the provided testing function
+let foundIndex = fruits.findIndex(fruit => fruit.startsWith("c"));
+console.log(foundIndex); // Output: 2
+// 14. includes() - Determines whether an array includes a certain value
+let hasBanana = fruits.includes("banana");
+console.log(hasBanana); // Output: true
+// 15. join() - Joins all elements of an array into a string
+let fruitString = fruits.join(", ");
+console.log(fruitString); // Output: 'blueberry, banana, cherry'
+// 16. sort() - Sorts the elements of an array in place and returns the sorted array
+let sortedFruits = fruits.sort();
+console.log(sortedFruits); // Output: ['banana', 'blueberry', 'cherry']
+// 17. reverse() - Reverses the elements of an array in place
+let reversedFruits = fruits.reverse();
+console.log(reversedFruits); // Output: ['cherry', 'blueberry', 'banana']
+// 18. concat() - Merges two or more arrays
+let moreFruits = fruits.concat(["date", "elderberry"]);
+console.log(moreFruits); // Output: ['cherry', 'blueberry', 'banana', 'date', 'elderberry']
+// 19. flat() - Creates a new array with all sub-array elements concatenated into it recursively up to the specified depth
+let nestedArray = [1, [2, [3, 4]], 5];
+let flatArray = nestedArray.flat(2);
+console.log(flatArray); // Output: [1, 2, 3, 4, 5]
+// 20. flatMap() - Maps each element using a mapping function and flattens
+let words = ["hello world", "how are you"];
+let flatMappedWords = words.flatMap(word => word.split(" "));
+console.log(flatMappedWords); // Output: ['hello', 'world', 'how', 'are', 'you']
+// 21. Array.from() - Creates a new array instance from an array-like or iterable
+let str = "hello";
+let arrFromStr = Array.from(str);
+console.log(arrFromStr); // Output: ['h', 'e', 'l', 'l', 'o']
+// 22. Array.isArray() - Determines whether the passed value is an array
+let isArray = Array.isArray(fruits);
+console.log(isArray); // Output: true
+
+// array to string and string to array
+let exampleStr = "JavaScript is fun";
+let strToArr = exampleStr.split(" "); // Convert string to array
+console.log(strToArr); // Output: ['JavaScript', 'is', 'fun']
+let arrToStr2 = strToArr.join(" "); // Convert array back to string
+console.log(arrToStr2); // Output: 'JavaScript is fun'
+// reverse the string
+let reverseStr = exampleStr.split("").reverse().join("");
+console.log(reverseStr); // Output: 'nuf si tpircSavaJ'
+// reverse the words in the string
+let reverseWords = exampleStr.split(" ").reverse().join(" ");
+console.log(reverseWords); // Output: 'fun is JavaScript'
+// palindrome check
+let palindromeCheck = str => {
+  let cleanedStr = str.replace(/[^A-Za-z0-9]/g, "").toLowerCase();
+  let reversedStr = cleanedStr.split("").reverse().join("");
+  return cleanedStr === reversedStr;
+};
+console.log(palindrome);
