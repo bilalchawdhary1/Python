@@ -29,3 +29,14 @@ elif op == "/":
     print(num1 / num2)
 else:
     print("Invalid operator")
+
+# nm1 = int(input("Enter the 1st number:"))
+# opt = input("Enter the Oprater + - etc:")
+# nm2 = int(input("Enter the 2st number:"))
+
+# if opt == "+" :
+#     print(nm1 + nm2)
+# elif opt == "-" :
+#     print(nm1 - nm2)
+# else:
+#     print("nothing")
