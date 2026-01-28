@@ -1,0 +1,30 @@
+# for i in range(1, 11):
+#   print(i)
+
+# for j in range(1, 50):
+#   if j % 2 == 0:
+#     print(j)
+#   # print("even")
+
+# create 5 or other table by user input
+# table = int(input("Enter the table number:"))
+# for i in range(1, 11):
+#   print(f"{table} x {i} = {table * i}")
+
+# LIST 1
+# fruits = ["apple", "banana", "cherry"]
+# fruits.append("orange")
+# # fruits.remove("banana")
+# # print(fruits)
+
+# for furit in fruits:
+#   # print(furit)
+#   print(furit.upper())
+
+# LIST 2
+marks = [95, 98, 97, 99, 96, 94, 93, 92, 91, 90]
+for mark in marks:
+  print(mark)
+  maxma = max(marks)
+  if mark == maxma:
+    print(f"max marks is {mark}")
