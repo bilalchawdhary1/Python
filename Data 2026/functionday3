@@ -1,0 +1,90 @@
+#1 function that add two numbers
+def add(a, b):
+  return a + b
+
+
+print(add(2, 5))
+
+#2 function that check the even  number
+# num = int(input("Enter a number: "))
+
+
+def is_even(num):
+  if num % 2 == 0:
+    print("Even")
+  else:
+    print("Odd")
+
+
+is_even(3)
+
+
+#3 Function that returns square of a number
+def square(num):
+  return num * num
+
+
+print(square(3))
+
+
+#4 Function that takes name & age → prints sentence
+def print_sentence(name, age):
+  print(f"{name} is {age} years old")
+
+
+print_sentence("John", 25)
+
+
+# LIST + FUNCTIONS COMBO
+def get_average(marks_list):
+  total = sum(marks_list)
+  average = total / len(marks_list)
+  return average
+
+
+print(f"Average is {get_average([10, 20, 30, 40, 50])}")
+
+
+# get hightest marks
+def get_highest(marks_list):
+  highest = max(marks_list)
+  return highest
+
+
+print(f"Highest marks is {get_highest([10, 20, 30, 40, 50])}")
+
+
+# get get_lowest marks
+def get_lowest(marks_list):
+  lowest = min(marks_list)
+  return lowest
+
+
+print(f"lowest marks is {get_lowest([10, 20, 30, 40, 50])}")
+
+# MINI PROJECT Expense Tracker
+# expense1 = int(input("Enter expense 1: "))
+# expense2 = int(input("Enter expense 2: "))
+# expense3 = int(input("Enter expense 3: "))
+# expense4 = int(input("Enter expense 4: "))
+# expense5 = int(input("Enter expense 5: "))
+
+# expenses = [expense1, expense2, expense3, expense4, expense5]
+
+
+# def average_expense(expenses):
+#   total = sum(expenses)
+#   average = total / len(expenses)
+#   print(f"total expense is {total} and Average expense is {average}")
+#   return average
+
+
+# average_expense(expenses)
+
+
+# Reverse String
+def reverse_string(string):
+  return string[::-1]
+
+
+print(reverse_string("Hello World"))
