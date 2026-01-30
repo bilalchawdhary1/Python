@@ -1,0 +1,87 @@
+# # File in python
+# # here's file craetded and written
+# file = open("main.txt", "w")
+# file.write("Bilal is learning Python seriously.")
+# print(file)
+# file.close()
+# # here's file append
+# file = open("main.txt", "a")
+# file.write("It's a good thing.")
+# file.close()
+# # here's file read
+# file = open("main.txt", "r")
+# print(file.read())
+# file.close()
+
+# MINI PROJECT — TO-DO APP (FILE BASED)
+# here's file created by using 2nd method
+# tasks = input("tasks: ")
+# with open("todo.txt", "w") as file:
+#   file.write(tasks)
+
+# # here's file read by using 2nd method
+# with open("todo.txt", "r") as file:
+#   print(file.read())
+
+# # File in python
+# # here's file craetded and written
+# file = open("main.txt", "w")
+# file.write("Bilal is learning Python seriously.")
+# print(file)
+# file.close()
+# # here's file append
+# file = open("main.txt", "a")
+# file.write("It's a good thing.")
+# file.close()
+# # here's file read
+# file = open("main.txt", "r")
+# print(file.read())
+# file.close()
+
+# MINI PROJECT — TO-DO APP (FILE BASED)
+# here's file created by using 2nd method
+# tasks = input("tasks: ")
+# with open("todo.txt", "w") as file:
+#   file.write(tasks)
+
+# # here's file read by using 2nd method
+# with open("todo.txt", "r") as file:
+#   print(file.read())
+
+def add_task():
+  task = input("Enter task: ")
+  with open("tasks.txt", "a") as file:
+      file.write(task + "\n")
+  print("Task added successfully!")
+
+
+def view_tasks():
+  try:
+      with open("tasks.txt", "r") as file:
+          tasks = file.readlines()
+          if not tasks:
+              print("No tasks found.")
+          else:
+              print("\nYour Tasks:")
+              for i, task in enumerate(tasks, start=1):
+                  print(f"{i}. {task.strip()}")
+  except FileNotFoundError:
+      print("No task file found. Add a task first.")
+
+
+while True:
+  print("\n--- TO-DO APP ---")
+  print("1. Add Task")
+  print("2. View Tasks")
+  print("3. Exit")
+
+choice = input("Choose an option (1-3): ")
+  if choice == "1":
+      add_task()
+  elif choice == "2":
+      view_tasks()
+  elif choice == "3":
+      print("Exiting To-Do App. Goodbye!")
+      break
+  else:
+      print("Invalid choice. Try again.")
