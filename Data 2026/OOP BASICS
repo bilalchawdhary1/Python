@@ -1,0 +1,89 @@
+# OOP BASICS
+# 1.What is Class?
+# Class is a blueprint for creating objects.
+# 2.What is Object?
+# Object is an instance of a class.
+# constructor with exampel.
+# constructor is a special method that is called when an object is created.
+# ex
+
+# class Person:
+
+#   def __init__(self, name, age):
+#     self.name = name
+#     self.age = age
+#     print("Person object created")
+#     print("Name:", self.name)
+#     print("Age:", self.age)
+#     print("Person object created")
+
+# p1 = Person("John", 36)
+# p2 = Person("Jane", 25)
+# p3 = Person("Jack", 45)
+
+# Attributes & methods
+# Attributes are variables that belong to an object.
+# Methods are functions that belong to an object.
+# ex
+# class Person:
+#    def __init__(self, name, age):
+#       self.name = name
+#       self.age = age
+#       print("Person object created")
+#       print("Name:", self.name)
+#       print("Age:", self.age)
+#       print("Person object created")
+
+# class Person:
+
+#   def __init__(self, name, age):
+#     self.name = name
+#     self.age = age
+#     print(f'Hi Im {self.name} and Im {self.age} years old')
+
+# p1 = Person("John", 36)
+
+# MINI PROJECT — BANK ACCOUNT SYSTEM
+
+
+class BankAccount:
+
+  def __init__(self, owner_name, balance):
+    self.owner_name = owner_name
+    self.balance = balance
+
+  # methode
+  def deposit(self, amount):
+    self.balance += amount
+    print(f'Deposited {amount} into the account. New balance: {self.balance}')
+    # methode
+  def withdraw(self, amount):
+    if amount > self.balance:
+      print("Insufficient funds!")
+    else:
+      self.balance -= amount
+      print(f'Withdrew {amount} from the account. New balance: {self.balance}')
+      # methode
+  def get_balance(self):
+    print(f'Current balance: {self.balance}')
+
+
+account = BankAccount("John Doe", 1000)
+account.deposit(500)
+account.withdraw(200)
+account.get_balance()
+
+
+# SMALL LOGIC TASK
+
+class Product:
+   def __init__(self, name, price):
+      self.name = name
+      self.price = price
+
+# apply_discount
+   def apply_discount(self, discount_percentage):
+      self.price -= self.price * discount_percentage / 100
+      print(f'Discount applied. New price: {self.price}')
+      # display_info
+     
