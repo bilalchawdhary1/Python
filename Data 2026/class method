@@ -1,0 +1,56 @@
+# class method vs instance variabls
+# class MyClass:
+#   class_var = 0  # class variable
+
+#   def __init__(self):
+#     self.instance_var = 0  # class variable
+#     MyClass.class_var += 1  # class variable
+#     print("class_var = ", MyClass.class_var)
+
+# 2 obj1 = MyClass()
+
+# __str__ method
+# class MyClass:
+#   def __init__(self, name):
+#     self.name = name
+#   def __str__(self):
+#     return f"MyClass instance with name: {self.name}"
+# obj = MyClass("Alice")
+# print(obj)
+
+
+# MINI PROJECT — E-Commerce Model
+# class Product:
+
+#   def __init__(self, name, price, quantity):
+#     self.name = name
+#     self.price = price
+#     self.quantity = quantity
+
+# # method: reduce_stock()
+
+#   def reduce_stock(self, quantity):
+#     if self.quantity >= quantity:
+#       self.quantity -= quantity
+#       return True
+#     else:
+#       return False
+
+
+# class Customer:
+#    def __init__(self, name, cart):
+#       self.name = name
+#       self.cart = cart
+#       # methored: add_to_cart()
+#    def add_to_cart(self, product, quantity):
+#       if product.reduce_stock(quantity):
+#          self.cart.append((product, quantity))
+#          return True
+#       else
+#       return False
+#       # method: checkout()
+#    def checkout(self):
+#       total_price = 0
+#       for product, quantity in self.cart:
+#          total_price += product.price * quantity
+#          return total_price
