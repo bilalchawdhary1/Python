@@ -1,0 +1,41 @@
+# Path Parameters with Numbers
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+
+# @app.get("/users/{user_id}")
+# def get_user(user_id: int):
+#   return {"user_id": user_id}
+
+# # Path Parameters with string
+# @app.get("/users/{user_name}")
+# def get_user2(user_name: str):
+#   return {"user_name": user_name}
+
+# # Path Parameters with string and number
+# @app.get("/users/{user_name}/{user_id}")
+# def get_user3(user_name: str, user_id: int):
+#   return {"user_name": user_name, "user_id": user_id}
+
+# # Query Parameters
+# @app.get("/users/")
+# def get_user4(user_name: str, user_id: int):
+#   return {"user_name": user_name, "user_id": user_id}
+# # http://127.0.0.1:8000/users/?user_name=John&user_id=1
+
+# POST Request + Request Body
+
+
+class Product(BaseModel):
+  name: str
+  price: float
+  quantity: int
+
+
+@app.post("/products/")
+def create_product(product: Product):
+  return {"message": "Product created successfully", "product": product}
+
+
+# htttp://127.0.0.1:8000/docs
