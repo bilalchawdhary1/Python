@@ -1,0 +1,18 @@
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/")
+def read_root():
+    return {"message": "Hello FastAPI on Replit 🚀"}
+
+
+@app.get("/skills")
+def skills():
+    return {"message": "This is the skills page!"}
+
+
+@app.get("/projects")
+def projects():
+    return {"message": "This is the projucts page!"}

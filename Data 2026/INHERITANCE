@@ -1,0 +1,16 @@
+# INHERITANCE PRACTICE
+class User:
+   def __init__(self, name, email,): # constructor
+      self.name = name
+      self.email = email
+
+class Admin(User):
+   def __init__(self, name, email, role):
+      super().__init__(name, email)
+      self.role = role
+      self.privileges = []
+      self.privileges.append("can add post")
+     # extra method: delete_user()
+      def delete_user(self, user):
+         print(f"{self.name} deleted {user.name} from the system.")
+         # extra method: show_privileges()
